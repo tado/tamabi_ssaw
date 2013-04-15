@@ -9,7 +9,7 @@ Sound and Software Art Workshop (SSAW13) – 多摩美術大学
 
 ## 授業スケジュール (予定)
 
-* 第１回：Pd入門1 – Pdとは? プログラミングの基本
+* [第１回：Pd入門1 – Pdとは? プログラミングの基本](https://github.com/tado/tamabi_ssaw13/blob/master/ssaw130415.md)
 * 第２回：Pd入門2 – 音響合成: シンセサイザーを作る
 * 第３回：Pd入門3 – サンプリング＆プレイバック: サンプラー、リズムマシンを作る
 * 第４回：PduinoをつかってPdとArduinoを連携する1
