@@ -1,0 +1,42 @@
+#N canvas 543 22 461 588 12;
+#X obj -17 88 soundfiler;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array sample1 604510 float 2;
+#X coords 0 1 604510 -1 200 140 1 0 0;
+#X restore 142 380 graph;
+#X obj -17 349 output~;
+#X obj -17 27 openpanel;
+#X obj -17 3 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X text 8 0 load sound file;
+#X msg -17 53 read -resize \$1 sample1;
+#X obj -17 121 expr 44100 / $f1;
+#X obj -17 239 phasor~;
+#X obj -17 279 *~;
+#X obj 144 319 unsig~ 50;
+#X obj 147 347 hsl 200 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 1814 1;
+#X obj -17 212 *;
+#X obj 145 115 hsl 200 15 -2 2 0 0 empty empty empty -2 -6 0 8 -262144
+-1 -1 13000 1;
+#X text 143 92 playback speed;
+#X obj 142 135 t b f;
+#X text 66 209;
+#X text 229 323 playback position;
+#X obj -17 311 tabread4~ sample1;
+#X connect 0 0 7 0;
+#X connect 0 0 9 1;
+#X connect 3 0 6 0;
+#X connect 4 0 3 0;
+#X connect 6 0 0 0;
+#X connect 7 0 12 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 18 0;
+#X connect 10 0 11 0;
+#X connect 12 0 8 0;
+#X connect 13 0 15 0;
+#X connect 15 0 12 0;
+#X connect 15 1 12 1;
+#X connect 18 0 2 0;
+#X connect 18 0 2 1;

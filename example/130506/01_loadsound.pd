@@ -1,10 +1,9 @@
-#N canvas 625 47 643 242 12;
-#X obj 38 59 soundfiler;
+#N canvas 625 47 658 328 12;
+#X obj 39 59 soundfiler;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array sample1 604510 float 2;
 #X coords 0 1 604510 -1 200 140 1 0 0;
-#X restore 339 30 graph;
-#X msg 38 33 read -resize glitch_loop.aiff sample1;
+#X restore 369 51 graph;
 #X obj 39 145 tabplay~ sample1;
 #X obj 39 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -12,10 +11,17 @@
 #X msg 106 101 10000;
 #X msg 157 101 23000 30000;
 #X msg 62 101 stop;
-#X connect 2 0 0 0;
-#X connect 3 0 5 0;
-#X connect 3 0 5 1;
-#X connect 4 0 3 0;
-#X connect 6 0 3 0;
-#X connect 7 0 3 0;
-#X connect 8 0 3 0;
+#X obj 39 -2 openpanel;
+#X obj 39 -26 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 39 24 read -resize \$1 array1;
+#X text 64 -29 load sound file;
+#X connect 2 0 4 0;
+#X connect 2 0 4 1;
+#X connect 3 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 0 0;
